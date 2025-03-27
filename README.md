@@ -2,6 +2,8 @@
 
 This function allows adding punctuation marks to texts in PICO-8 using the "puny font" (activated with `CTRL+P`). With a simple substitution system, you can add acute and grave accents, diaeresis, circumflex, anunasika, the Spanish ñ, and the cedilla ç.
 
+![screenshot showing punctuation](https://github.com/kamencesc/pico8-punctuation/blob/main/punct_1.png?raw=true)
+
 ## Usage
 
 The function processes a text where vowels in "puny font" format are modified according to the characters that follow them:
