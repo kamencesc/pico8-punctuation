@@ -18,7 +18,7 @@ The function processes a text where vowels in "puny font" format are modified ac
 
 The main function takes **153 tokens**, making it small and versatile. If you want to reduce token consumption, you can **comment out parts of the `IF` loop** to remove unnecessary punctuation marks based on the language you are using.
 
-In spanish you don't need open grave accent, circumflex, anunasika and ç so you can reduce to 89 tokens.
+In spanish you don't need open grave accent, circumflex, anunasika and ç so you can reduce to arround 89 tokens.
 
 ## Special Character Substitution
 
