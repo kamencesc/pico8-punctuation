@@ -8,7 +8,7 @@ The function processes a text where vowels in "puny font" format are modified ac
 
 Standalone vowel → Acute accent (example: a → á)
 
-Vowel followed by → Grave accent (example: a`` → à)
+Vowel followed by → Grave accent (example: a` → à)
 
 Vowel followed by # → Diaeresis (example: u# → ü)
 
