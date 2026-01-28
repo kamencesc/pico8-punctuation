@@ -18,7 +18,8 @@ __lua__
 -- A* E* I* O* U* anunaasika
 -- N spanish n
 -- C c-cedilla
-
+-- く ¡
+-- よ ¿
 function punct(txt)
  local ret,n="",1
  if (txt==nil or #txt==0) return ret
@@ -44,6 +45,10 @@ function punct(txt)
    ret..=".\vuC"
   elseif l1=="N" then
    ret..="N\vm-"
+  elseif l1=="く" then
+   ret..="⁶:0200020202000000\-c"
+  elseif l1=="よ" then
+   ret..="⁶:0200030107000000\-c"
   elseif intab then
    ret..=l1.."\vr'"
   else
