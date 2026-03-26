@@ -11,13 +11,13 @@ __lua__
 
 -- how it works
 -- ctrl+p and use puny font
--- a e i o u close accent 
--- a` e` o` open accen
--- i# u# dieresis 
--- a^ e^ i^ o^ u^ circumflex
--- a* e* i* o* u* anunaasika
--- n spanish n
--- c c-cedilla
+-- A E I O U close accent 
+-- A` E` O` open accen
+-- I# U# dieresis 
+-- A^ E^ I^ O^ U^ circumflex
+-- A* E* I* O* U* anunaasika
+-- N spanish n
+-- C c-cedilla
 -- !` inverted exclamation mark
 -- ?` inverted question mark
 function punct(txt)
@@ -29,22 +29,11 @@ function punct(txt)
   for i in all(split("A,E,I,O,U")) do
    if (l1==i) intab=true
   end
-  if l2=="`" then
-   ret..=l1.."ᵇp`"
-   n+=1
-  elseif l2=="#" then
+  if l2=="#" then
    if (l1=="?") ret..="⁶:0200030107000000³c"
    if (l1=="!") ret..="⁶:0200020202000000³c"
    if (intab)ret..=l1.."ᵇq"..chr(20)
    n+=1
-  elseif l2=="^" then
-   ret..=l1.."ᵇq^"
-   n+=1
-  elseif l2=="*" then
-   ret..=l1.."ᵇe."
-   n+=1
-  elseif l1=="C" then
-   ret..=".ᵇuC"
   elseif l1=="N" then
    ret..="Nᵇm-"
   elseif intab then
