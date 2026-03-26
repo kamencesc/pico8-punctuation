@@ -30,25 +30,25 @@ function punct(txt)
    if (l1==i) intab=true
   end
   if l2=="`" then
-   if(l1=="?")ret..="⁶:0200030107000000\-c"
-   if(l1=="!")ret..="⁶:0200020202000000\-c"
-   if(intab)ret..=l1.."\vp`"
+   if (l1=="?") ret..="⁶:0200030107000000³c"
+   if (l1=="!") ret..="⁶:0200020202000000³c"
+   if (intab) ret..=l1.."ᵇp`"
    n+=1
   elseif l2=="#" then
-   ret..=l1.."\vq"..chr(20)
+   ret..=l1.."ᵇq"..chr(20)
    n+=1
   elseif l2=="^" then
-   ret..=l1.."\vq^"
+   ret..=l1.."ᵇq^"
    n+=1
   elseif l2=="*" then
-   ret..=l1.."\ve."
+   ret..=l1.."ᵇe."
    n+=1
   elseif l1=="C" then
-   ret..=".\vuC"
+   ret..=".ᵇuC"
   elseif l1=="N" then
-   ret..="N\vm-"
+   ret..="Nᵇm-"
   elseif intab then
-   ret..=l1.."\vr'"
+   ret..=l1.."ᵇr'"
   else
    ret..=l1
   end
