@@ -1,5 +1,5 @@
 pico-8 cartridge // http://www.pico-8.com
-version 42
+version 43
 __lua__
 -- punctuation text
 --
@@ -11,15 +11,15 @@ __lua__
 
 -- how it works
 -- ctrl+p and use puny font
--- A E I O U close accent 
--- A` E` O` open accen
--- I# U# dieresis 
--- A^ E^ I^ O^ U^ circumflex
--- A* E* I* O* U* anunaasika
--- N spanish n
--- C c-cedilla
--- く ¡
--- よ ¿
+-- a e i o u close accent 
+-- a` e` o` open accen
+-- i# u# dieresis 
+-- a^ e^ i^ o^ u^ circumflex
+-- a* e* i* o* u* anunaasika
+-- n spanish n
+-- c c-cedilla
+-- く るく
+-- よ るよ
 function punct(txt)
  local ret,n="",1
  if (txt==nil or #txt==0) return ret
@@ -30,25 +30,29 @@ function punct(txt)
    if (l1==i) intab=true
   end
   if l2=="`" then
-   ret..=l1.."\vp`"
+   if l1=="?" then
+    ret..="⁶:0200030107000000\-c"
+   elseif l1=="!" then
+    ret..="⁶:0200020202000000\-c"
+   else
+    ret..=l1.."\vp`"
+   end
    n+=1
   elseif l2=="#" then
    ret..=l1.."\vq"..chr(20)
    n+=1
+
   elseif l2=="^" then
    ret..=l1.."\vq^"
    n+=1
   elseif l2=="*" then
    ret..=l1.."\ve."
    n+=1
+   
   elseif l1=="C" then
    ret..=".\vuC"
   elseif l1=="N" then
    ret..="N\vm-"
-  elseif l1=="く" then
-   ret..="⁶:0200020202000000\-c"
-  elseif l1=="よ" then
-   ret..="⁶:0200030107000000\-c"
   elseif intab then
    ret..=l1.."\vr'"
   else
@@ -58,6 +62,7 @@ function punct(txt)
  end
  return ret
 end
+
 cls()
 ?punct("A E I O U"),50,10
 ?punct("A` E` I` O` U` "),50,20
@@ -65,7 +70,7 @@ cls()
 ?punct("A* E* I* O* U* "),50,40
 ?punct("A^ E^ I^ O^ U^ "),50,50
 ?punct("C N"),60,60
-
+?punct("!` ?`"),60,70
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
