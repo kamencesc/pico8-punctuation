@@ -18,8 +18,8 @@ __lua__
 -- a* e* i* o* u* anunaasika
 -- n spanish n
 -- c c-cedilla
--- く るく
--- よ るよ
+-- !` inverted exclamation mark
+-- ?` inverted question mark
 function punct(txt)
  local ret,n="",1
  if (txt==nil or #txt==0) return ret
