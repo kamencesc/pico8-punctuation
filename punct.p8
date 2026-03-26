@@ -5,7 +5,7 @@ __lua__
 --
 -- francesc bofill
 -- kamencesc
--- 2025
+-- 2025-2026
 --
 -- https://github.com/kamencesc/pico8-punctuation
 
@@ -30,25 +30,19 @@ function punct(txt)
    if (l1==i) intab=true
   end
   if l2=="`" then
-   if l1=="?" then
-    ret..="⁶:0200030107000000\-c"
-   elseif l1=="!" then
-    ret..="⁶:0200020202000000\-c"
-   else
-    ret..=l1.."\vp`"
-   end
+   if(l1=="?")ret..="⁶:0200030107000000\-c"
+   if(l1=="!")ret..="⁶:0200020202000000\-c"
+   if(intab)ret..=l1.."\vp`"
    n+=1
   elseif l2=="#" then
    ret..=l1.."\vq"..chr(20)
    n+=1
-
   elseif l2=="^" then
    ret..=l1.."\vq^"
    n+=1
   elseif l2=="*" then
    ret..=l1.."\ve."
    n+=1
-   
   elseif l1=="C" then
    ret..=".\vuC"
   elseif l1=="N" then
