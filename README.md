@@ -12,7 +12,7 @@ The function processes a text where vowels in "puny font" format are modified ac
 - **Vowel followed by \`** → Grave accent (example: a\` → `à`)
 - **Vowel followed by #** → Diaeresis (example: u# → `ü`)
 - **Vowel followed by ^** → Circumflex (example: e^ → `ê`)
-- **Vowel followed by *** → Anunasika (example: a* → `å`)
+- **Vowel followed by \*** → Anunasika (example: a* → `å`)
 - **c** → ç (cedilla)
 - **n** → ñ (Spanish ñ)
 - **Question mark followed by \`** → ¿
