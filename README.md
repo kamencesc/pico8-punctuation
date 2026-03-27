@@ -59,3 +59,5 @@ Here is a code snippet to calculate the length of a string that contains special
      end
      return r
     end
+
+Remember to activate Puny Font **ctrl+p** when you paste it to test.
