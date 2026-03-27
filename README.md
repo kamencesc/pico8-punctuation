@@ -18,6 +18,20 @@ The function processes a text where vowels in "puny font" format are modified ac
 - **Question mark followed by \`** → ¿
 - **Exclamation mark followed by \`** → ¡
 
+## How does it work?
+
+The changes are made using **control codes** that are reinterpreted when the text is rendered on screen. The vast majority simply shift a character to a specific position on top of the previous character.
+
+Therefore, by placing '`' or '´' over a vowel from the **puny font** at the correct position, it is possible to achieve Latin accentuation without losing much vertical space while keeping the text compact.
+
+The system for **'ñ'** works the same way. However, for **'ç'** it is reversed, since the *puny* **c** is placed over a dot.
+
+Finally, the symbols **'¡'** and **'?'** are completely redrawn in **8×8** and repositioned so they fit within the **3×5** character structure, without harming the final text.
+
+All **control codes** have been reinterpreted to take up as little space as possible.
+
+You can find the full documentation about the control codes in the **P8SCII** section of the [Pico-8 API Cheatsheet](https://iiviigames.github.io/pico8-api/#p8scii) by iiviigames
+
 ## Token Optimization
 
 The main function takes **172 tokens**, making it small and versatile. If you want to reduce token consumption, you can **comment out parts of the `IF` loop** to remove unnecessary punctuation marks based on the language you are using.
