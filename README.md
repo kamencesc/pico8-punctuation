@@ -22,7 +22,7 @@ The function processes a text where vowels in "puny font" format are modified ac
 
 The changes are made using **control codes** that are reinterpreted when the text is rendered on screen. The vast majority simply shift a character to a specific position on top of the previous character.
 
-Therefore, by placing '`' or '´' over a vowel from the **puny font** at the correct position, it is possible to achieve Latin accentuation without losing much vertical space while keeping the text compact.
+Therefore, by placing accents '`' or '´' over a vowel from the **puny font** at the correct position, it is possible to achieve Latin accentuation without losing much vertical space while keeping the text compact.
 
 The system for **'ñ'** works the same way. However, for **'ç'** it is reversed, since the *puny* **c** is placed over a dot.
 
