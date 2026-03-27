@@ -29,3 +29,19 @@ In spanish you don't need open grave accent, circumflex, anunasika and ç so you
 If your text uses special characters (` * # ^`), you can replace them with other characters in the text to avoid conflicts with the punctuation system.
 
 This function makes it easy to add punctuation marks to PICO-8 texts without modifying fonts or using more complex systems.
+
+## String Len
+
+Here is a code snippet to calculate the length of a string that contains special characters for punctuation: 53 tokens and 202 characters.
+
+    function plen(str)
+     local r=#str
+     for n=1,#str do
+      for i in all(split("𝘢,𝘦,𝘪,𝘰,𝘶,𝘯,𝘤,?,!")) do
+       for j in all(split("`,^,#,*")) do
+        if(str[n+1]==j and str[n]==i)r-=1
+       end
+      end
+     end
+     return r
+    end
